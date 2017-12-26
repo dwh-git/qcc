@@ -1,1 +1,2 @@
-# qcc
+# 企查查
+springboot和gradle搭建的查询企业工商信息的接口平台
