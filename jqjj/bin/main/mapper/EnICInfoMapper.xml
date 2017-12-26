@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jiuqi.jjintfp.mapper.EnICInfoMapper">
+	<select id="queryEnICInfoByName" resultType="com.jiuqi.jjintfp.model.EnterpriseICInfo" parameterType="string">
+		SELECT e.ID,e.KEYNO,e.NAME,e.NO,e.BELONGORG,e.OPERNAME,e.STARTDATE,e.ENDDATE,e.STATUS,e.PROVINCE,
+		e.UPDATEDDATE,e.CREDITCODE,e.REGISTCAPI,e.ECONKIND,e.ADDRESS,e.SCOPE,e.TERMSTART,e.TEAMEND,e.CHECKDATE,
+		e.ORGNO,e.ISONSTOCK,e.STOCKNUMBER,e.STOCKTYPE,e.OTHER FROM ENICINFO e WHERE e.NAME=#{KEYWORD}
+	</select>
+	
+	<select id="queryEnICInfoByNo" resultType="com.jiuqi.jjintfp.model.EnterpriseICInfo" parameterType="string">
+		SELECT e.ID,e.KEYNO,e.NAME,e.NO,e.BELONGORG,e.OPERNAME,e.STARTDATE,e.ENDDATE,e.STATUS,e.PROVINCE,
+		e.UPDATEDDATE,e.CREDITCODE,e.REGISTCAPI,e.ECONKIND,e.ADDRESS,e.SCOPE,e.TERMSTART,e.TEAMEND,e.CHECKDATE,
+		e.ORGNO,e.ISONSTOCK,e.STOCKNUMBER,e.STOCKTYPE,e.OTHER FROM ENICINFO e WHERE e.NO=#{KEYWORD}
+	</select>
+	
+	<select id="queryEnICInfoByCode" resultType="com.jiuqi.jjintfp.model.EnterpriseICInfo" parameterType="string">
+		SELECT e.ID,e.KEYNO,e.NAME,e.NO,e.BELONGORG,e.OPERNAME,e.STARTDATE,e.ENDDATE,e.STATUS,e.PROVINCE,
+		e.UPDATEDDATE,e.CREDITCODE,e.REGISTCAPI,e.ECONKIND,e.ADDRESS,e.SCOPE,e.TERMSTART,e.TEAMEND,e.CHECKDATE,
+		e.ORGNO,e.ISONSTOCK,e.STOCKNUMBER,e.STOCKTYPE,e.OTHER FROM ENICINFO e WHERE e.CREDITCODE=#{KEYWORD}
+	</select>
+	
+	<insert id="insertEnICInfo" parameterType="com.jiuqi.jjintfp.model.EnterpriseICInfo">
+		insert into ENICINFO values(null,#{keyNo},#{name},#{no},#{belongOrg},#{operName},#{startDate},#{endDate},#{status},
+		#{province},#{updatedDate},#{creditCode},#{registCapi},#{econKind},#{address},#{scope},#{termStart},#{teamEnd},#{checkDate},
+		#{orgNo},#{isOnStock},#{stockNumber},#{stockType},#{other})
+	</insert>
+	
+</mapper>

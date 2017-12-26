@@ -1,0 +1,26 @@
+#服务端口
+server:
+  port: 9702
+
+#数据源配置
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/qcc?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: 
+    driver-class-name: com.mysql.jdbc.Driver
+
+#mapper配置文件扫描
+mybatis:
+  mapper-locations:
+  - classpath:mapper/*Mapper.xml
+
+#企查查地址以及应用key
+qichacha:
+      address: http://i.yjapi.com/ECIV4/GetDetailsByName
+      appKey: 539c75bb56494175a0da088cd1f275f6
+      mapProps:
+        1000H: 55EF11D70E29419E83C8CE85B52757B7
+        1010H: D80F2C8B9C334905A4241194463245AA
+        T02001001: 2AE8B6E6956D4476AB9C8A04E1BF0847
+        1010: BBF3E810EF314B17A40661ECD824C6FF

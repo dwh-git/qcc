@@ -1,0 +1,27 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.jiuqi.jjintfp.model.AppAuthMapping",
+      "name": "qichacha",
+      "type": "com.jiuqi.jjintfp.model.AppAuthMapping"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.jiuqi.jjintfp.model.AppAuthMapping",
+      "name": "qichacha.address",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.jiuqi.jjintfp.model.AppAuthMapping",
+      "name": "qichacha.app-key",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.jiuqi.jjintfp.model.AppAuthMapping",
+      "name": "qichacha.map-props",
+      "type": "java.util.Map<java.lang.String,java.lang.String>"
+    }
+  ]
+}
